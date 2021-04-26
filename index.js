@@ -20,6 +20,7 @@ app.set('view engine', 'hbs')
 // Routes
 app.use('/', require('./routes/home'))
 app.use('/posts', require('./routes/post'))
+app.use('/hashtags', require('./routes/hashtag'))
 app.use('*', require('./routes/404'))
 
 app.listen(port, () => console.log('App listening on port ' + port))

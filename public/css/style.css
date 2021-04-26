@@ -7,7 +7,7 @@ body {
 }
 .site-header {
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 200px 200px 200px;
     background-color: orangered;
     padding: 20px;
     grid-gap: 20px;
