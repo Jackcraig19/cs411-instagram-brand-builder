@@ -3,7 +3,7 @@ const app = express()
 const handlebars = require('express-handlebars')
 require('dotenv').config()
 
-const port = process.env.PORT || '3000'
+const port = '80'
 
 app.use(express.static(__dirname + '/public',{maxAge: '0'}))
 
@@ -15,6 +15,7 @@ app.engine('hbs', handlebars({
     defaultLayout: 'index',
 }))
 
+app.set('views', __dirname + '/views')
 app.set('view engine', 'hbs')
 
 // Routes

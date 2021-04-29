@@ -1,9 +1,9 @@
 const config = {
     db: {
-        host: process.env.DB_DOMAIN,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASS,
-        database: process.env.DB_NAME
+        host: '35.188.169.83',
+        user: 'root',
+        password: 'TaPHmkgAv6ZZ4Zta',
+        database: 'project_data'
     }
 }
 module.exports = config
