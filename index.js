@@ -23,6 +23,8 @@ app.use('/', require('./routes/home'))
 app.use('/posts', require('./routes/post'))
 app.use('/hashtags', require('./routes/hashtag'))
 app.use('/accounts', require('./routes/accounts'))
+app.use('/followers', require('./routes/followers'))
+app.use('/following', require('./routes/following'))
 app.use('/dates', require('./routes/dates'))
 app.use('*', require('./routes/404'))
 

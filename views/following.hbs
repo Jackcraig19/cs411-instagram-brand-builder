@@ -1,0 +1,86 @@
+<main>
+    <div class="main-crud-container">
+        <div class="data-container">
+            <h1>Following Dashboard</h1>
+            <p><span class='data-value'>{{numPosts}}</span> Following in Database.</p>
+            {{#each errors}}
+            <p class="error-msg">{{this}}</p>
+            {{/each}}
+        </div>
+        <div class="crud-container">
+            <div class="block-container">
+                <div>
+                    <form>
+                        <h4>Search Following</h4>
+                        <input style="display: none;" name="qt" value="search">
+                        <div class="label-group">
+                            <label>Username</label>
+                            <input name="usr" type="text" placeholder="@beyonce">
+                        </div>
+                        <div class="label-group">
+                            <label>Submit</label>
+                            <input type="submit" text="Search">
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <form>
+                        <h4>Create Following</h4>
+                        <input style="display: none;" name="qt" value="create">
+                        <div class="label-group">
+                            <label>username</label>
+                            <input name="username" type="text" id="following-username" placeholder="@beyonce">
+                        </div>
+                        <div class="label-group">
+                            <label>following account</label>
+                            <input name="following_account" type="text" id="following-following_account" placeholder="@jayz">
+                        </div>
+                        <div class="label-group">
+                            <label>Submit</label>
+                            <input type="submit" text="Create">
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <form>
+                        <h4>Delete Following</h4>
+                        <input style="display: none;" name="qt" value="delete">
+                        <div class="label-group">
+                            <label>username</label>
+                            <input name="username" type="text" placeholder="@beyonce">
+                        </div>
+                        <div class="label-group">
+                            <label>following account to delete</label>
+                            <input name="following_account" type="text" placeholder="@jayz">
+                        </div>
+                        <div class="label-group">
+                            <label>Submit</label>
+                            <input type="submit" text="Delete">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="block-container">
+                <h4>Viewing Window</h4>
+                <div class="results-window">
+                    <table id="results-window-table">
+                        <tr>
+                            <th>username</th>
+                            <th>following account</th>
+                        </tr>
+                        {{#each windowData}}
+                        <tr>
+                            <td>
+                                {{this.username}}
+                            </td>
+                            <td>
+                                {{this.following_account}}
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

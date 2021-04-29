@@ -80,7 +80,7 @@
                         <h4>Delete Account</h4>
                         <input style="display: none;" name="qt" value="delete">
                         <div class="label-group">
-                            <label>Post Id To Delete</label>
+                            <label>Account To Delete</label>
                             <input name="username" type="text" placeholder="@beyonce">
                         </div>
                         <div class="label-group">
@@ -108,6 +108,8 @@
                             <th>username</th>
                             <th>name</th>
                             <th>password</th>
+                            <th>follower count</th>
+                            <th>following count</th>
                         </tr>
                         {{#each windowData}}
                         <tr>
@@ -119,6 +121,12 @@
                             </td>
                             <td>
                                 {{this.password}}
+                            </td>
+                            <td>
+                                {{this.current_follower_count}}
+                            </td>
+                            <td>
+                                {{this.current_following_count}}
                             </td>
                         </tr>
                         {{/each}}
