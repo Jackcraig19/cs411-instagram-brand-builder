@@ -3,7 +3,7 @@ const app = express()
 const handlebars = require('express-handlebars')
 require('dotenv').config()
 
-const port = '80'
+const port = process.env.port || '8080'
 
 app.use(express.static(__dirname + '/public',{maxAge: '0'}))
 
