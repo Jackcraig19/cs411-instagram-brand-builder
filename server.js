@@ -26,6 +26,7 @@ app.use('/accounts', require('./routes/accounts'))
 app.use('/followers', require('./routes/followers'))
 app.use('/following', require('./routes/following'))
 app.use('/dates', require('./routes/dates'))
+app.use('/fake', require('./routes/fakeFriends'))
 app.use('*', require('./routes/404'))
 
 app.listen(port, () => console.log('App listening on port ' + port))

@@ -1,0 +1,49 @@
+<main>
+    <div class="main-crud-container">
+        <div class="data-container">
+            <h1>Fake Friend Detector</h1>
+            {{#each errors}}
+            <p class="error-msg">{{this}}</p>
+            {{/each}}
+        </div>
+        <div class="crud-container">
+            <div class="block-container">
+                <div>
+                    <form>
+                        <h4>Find Fakes</h4>
+                        <div class="label-group">
+                            <label>your username</label>
+                            <input name="usr" type="text" placeholder="kyliejenner">
+                        </div>
+                        <div class="label-group">
+                            <label>fame threshold</label>
+                            <input name="fame" type="number" placeholder="3000">
+                        </div>
+                        <div class="label-group">
+                            <label>Submit</label>
+                            <input type="submit" text="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="block-container">
+            <h4>Fake Friends</h4>
+            <div class="results-window">
+                <table id="results-window-table">
+                    <tr>
+                        <th>username</th>
+                    </tr>
+                    {{#each windowData}}
+                    <tr>
+                        <td>
+                            {{this.username}}
+                        </td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+</main>
